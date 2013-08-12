@@ -1,0 +1,25 @@
+﻿<Window x:Class="WPF45_LiveShapping.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="510.527" Width="628.158"
+         Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="75*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Using Live Shaping => Sorting" FontSize="40" FontWeight="Bold"/>
+        <DataGrid x:Name="dgproducts" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="25,10,0,0"
+                  Grid.Row="1" VerticalAlignment="Top" Height="334" Width="356" 
+                    >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ProductId}" Header="ProductId"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding ProductName}" Header="ProductName"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Price}" Header="Price"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnlivesort" Content="Live Sort" HorizontalAlignment="Left" Margin="406,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" RenderTransformOrigin="1.107,0.65" Height="51" FontSize="30" FontWeight="Bold" Click="btnlivesort_Click"/>
+
+
+    </Grid>
+</Window>
